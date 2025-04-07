@@ -66,7 +66,6 @@ END_PORT = 3000
 MAX_RESULTS = 3
 COUNT = 2
 
-🚀 porty v1.0.0 is running!
 ✅ Port 2000 is free
 ✅ Port 2001 is free
 ✅ Port 2002 is free
