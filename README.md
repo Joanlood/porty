@@ -34,7 +34,7 @@ You will be prompted to enter the starting port, ending port, maximum results, a
 
 To update **Porty** to the latest version, simply run:
 
-`curl -fsSL https://raw.githubusercontent.com/Joanlood/porty/main/install.sh | sudo bash`
+`porty --update`
 
 This will fetch the latest version from GitHub and install it.
 
