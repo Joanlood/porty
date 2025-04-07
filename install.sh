@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # URL des Skripts
-SCRIPT_URL="https://raw.githubusercontent.com/<your-username>/porty/main/porty.sh"
+SCRIPT_URL="https://raw.githubusercontent.com/Joanlood/porty/main/porty.sh"
 INSTALL_PATH="/usr/local/bin/porty"
 
 # Lade das Skript herunter und installiere es
