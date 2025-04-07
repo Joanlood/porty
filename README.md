@@ -73,7 +73,7 @@ COUNT = 2
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU 3.0 License - see the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
@@ -81,11 +81,11 @@ Feel free to fork the repository, submit pull requests, or report issues. Contri
 
 ## Contact
 
-If you have any questions or suggestions, feel free to contact me at [your-email@example.com].
+I am working on a Discord Server but feel free to Report issues at Github.
 
 You can also follow me on GitHub: [@Joanlood](https://github.com/Joanlood).
 
 ---
 
-Happy port scanning! 🚀
+Have Fun! 🚀
 
