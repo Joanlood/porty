@@ -3,6 +3,9 @@
 VERSION="1.0.0"
 REMOTE_URL="https://raw.githubusercontent.com/Joanlood/porty/main/porty.sh"
 
+if [[ "$1" == "--version" ]]; then
+    echo "Porty version $version"
+    exit 0
 if [ "$1" == "--update" ]; then
     echo "🔄 Checking for updates..."
     sudo curl -s -o /usr/local/bin/porty $REMOTE_URL
