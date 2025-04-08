@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.0.0"
+VERSION="1.0.1"
 REMOTE_URL="https://raw.githubusercontent.com/Joanlood/porty/main/porty.sh"
 
 if [[ "$1" == "--version" ]]; then
