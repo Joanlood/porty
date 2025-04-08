@@ -41,7 +41,7 @@ This will fetch the latest version from GitHub and install it.
 
 If you ever want to uninstall **Porty**, run the following command:
 
-`curl -fsSL https://raw.githubusercontent.com/Joanlood/porty/main/uninstall.sh -o uninstall.sh && sudo bash uninstall.sh`
+`porty --uninstall`
 
 ## Example Output
 
