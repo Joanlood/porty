@@ -39,7 +39,6 @@ echo "END_PORT = $END_PORT"
 echo "MAX_RESULTS = $MAX_RESULTS"
 echo "COUNT = $COUNT"
 
-echo "🚀 porty v$VERSION is running!"
 
 for ((port=$START_PORT; port<=$END_PORT; port++)); do
   if ! sudo lsof -i :$port &>/dev/null; then
