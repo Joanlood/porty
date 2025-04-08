@@ -14,7 +14,6 @@ To install **Porty** on your Linux machine, you can simply run the following com
 
 `curl -fsSL https://raw.githubusercontent.com/Joanlood/porty/main/install.sh | sudo bash`
 
-This will download and install **Porty** to `/usr/local/bin/porty` and make it executable.
 
 ## Usage
 
