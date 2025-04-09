@@ -68,7 +68,7 @@ COUNT = 2
 
 ## Changelog
 
-For a detailed list of changes, please refer to the [CHANGELOG](CHANGELOG).
+For a detailed list of changes, please refer to the [CHANGELOG](CHANGELOG.md).
 
 ## License
 
