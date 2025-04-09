@@ -47,15 +47,13 @@ echo "Please enter the maximum number of results to display (default 5):"
 read MAX_RESULTS
 MAX_RESULTS=${MAX_RESULTS:-5}  
 
-echo "Please enter the count (default 0):"
-read COUNT
-COUNT=${COUNT:-0}  
-
+  
 echo "Using the following settings:"
 echo "START_PORT = $START_PORT"
 echo "END_PORT = $END_PORT"
 echo "MAX_RESULTS = $MAX_RESULTS"
-echo "COUNT = $COUNT"
+
+COUNT=0
 
 for ((port=$START_PORT; port<=$END_PORT; port++)); do
   if ! sudo lsof -i :$port &>/dev/null; then
