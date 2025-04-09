@@ -56,18 +56,19 @@ Please enter the ending port (default 65535):
 Please enter the maximum number of results to display (default 5):
 [User enters 3 or hits Enter for the default]
 
-Please enter the count (default 0):
-[User enters 2 or hits Enter for the default]
-
 Using the following settings:
 START_PORT = 2000
 END_PORT = 3000
 MAX_RESULTS = 3
 COUNT = 2
 
-✅ Port 2000 is free
-✅ Port 2001 is free
-✅ Port 2002 is free
+- ✅ Port 2000 is free
+- ✅ Port 2001 is free
+- ✅ Port 2002 is free
+
+## Changelog
+
+For a detailed list of changes, please refer to the [CHANGELOG](CHANGELOG).
 
 ## License
 
