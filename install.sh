@@ -2,7 +2,12 @@
 
 SCRIPT_URL="https://raw.githubusercontent.com/Joanlood/porty/main/porty.sh"
 INSTALL_PATH="/usr/local/bin/porty"
-
+echo " ____            _
+|  _ \ ___  _ __| |_ _   _
+| |_) / _ \| '__| __| | | |
+|  __/ (_) | |  | |_| |_| |
+|_|   \___/|_|   \__|\__, |
+                     |___/"
 echo "📥 Downloading porty..."
 curl -fsSL $SCRIPT_URL -o $INSTALL_PATH
 
