@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## `1.0.6` – 2026-03-13
+### Added
+- Added Error if no port was found in the specified range
+
 ## `1.0.5` – 2026-03-13
 ### Added
 - Added Errors to invalid options and a help Option (--help)
