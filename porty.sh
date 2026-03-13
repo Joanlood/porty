@@ -40,7 +40,7 @@ echo " ____            _
 | |_) / _ \| '__| __| | | |
 |  __/ (_) | |  | |_| |_| |
 |_|   \___/|_|   \__|\__, |
-                     |___/"
+                     |___/ "
 echo "Please enter the starting port (default 1024):"
 read START_PORT
 START_PORT=${START_PORT:-1024} 
