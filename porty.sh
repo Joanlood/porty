@@ -91,3 +91,8 @@ for ((port=$START_PORT; port<=$END_PORT; port++)); do
     break
   fi
 done
+
+if [ "$COUNT" -eq 0 ]; then
+    echo "❌ Error: No free ports found in the range $START_PORT-$END_PORT"
+    exit 1
+fi
