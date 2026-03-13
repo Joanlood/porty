@@ -7,7 +7,7 @@ echo " ____            _
 | |_) / _ \| '__| __| | | |
 |  __/ (_) | |  | |_| |_| |
 |_|   \___/|_|   \__|\__, |
-                     |___/"
+                     |___/ "
 echo "📥 Downloading porty..."
 curl -fsSL $SCRIPT_URL -o $INSTALL_PATH
 
