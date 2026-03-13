@@ -18,7 +18,7 @@ echo "
  ___) | (_| (_| | | | | | | |  __/ |
 |____/ \___\__,_|_| |_|_| |_|\___|_|
 "
-echo "     --- Made by Joanlood --- "
+echo "   --- Made by Joanlood --- "
 
 echo "📥 Downloading porty..."
 curl -fsSL $SCRIPT_URL -o $INSTALL_PATH
