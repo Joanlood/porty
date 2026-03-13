@@ -10,6 +10,26 @@ if [[ "$1" == "--version" ]]; then
     exit 0
 fi
 
+if [[ -n "$1" ]] && [[ "$1" != --* ]] ; then
+    echo "❌ Error: Unknown option '$1'"
+    echo "Use 'porty --help' for available options"
+    exit 1
+fi
+
+if [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]]; then
+    echo "Porty - Find free ports on your system"
+    echo ""
+    echo "Usage: porty [OPTION]"
+    echo ""
+    echo "Options:"
+    echo "  --help, -h        Display this help message"
+    echo "  --version         Display version information"
+    echo "  --update          Update Porty to the latest version"
+    echo "  --uninstall       Remove Porty from your system"
+    echo ""
+    exit 0
+fi
+
 if [[ "$1" == "--update" ]]; then
     echo "🔄 Checking for updates..."
     sudo curl -s -o $INSTALL_PATH $REMOTE_URL
