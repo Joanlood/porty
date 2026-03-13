@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.0.4"
+VERSION="1.0.5"
 REMOTE_URL="https://raw.githubusercontent.com/Joanlood/porty/main/porty.sh"
 INSTALL_PATH="/usr/local/bin/porty"
 
