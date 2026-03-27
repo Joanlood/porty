@@ -60,7 +60,6 @@ Using the following settings:
 START_PORT = 2000
 END_PORT = 3000
 MAX_RESULTS = 3
-COUNT = 2
 
 - ✅ Port 2000 is free
 - ✅ Port 2001 is free
