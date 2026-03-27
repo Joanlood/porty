@@ -2,7 +2,7 @@
 
 clear
 
-SCRIPT_URL="https://raw.githubusercontent.com/Joanlood/porty/main/porty.sh"
+SCRIPT_URL="https://raw.githubusercontent.com/Joanlood/porty/refs/heads/main/porty.sh"
 INSTALL_PATH="/usr/local/bin/porty"
 
 echo "
