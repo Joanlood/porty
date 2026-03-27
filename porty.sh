@@ -1,14 +1,27 @@
 #!/bin/bash
 
-VERSION="1.1.0"
+VERSION="1.1.1"
 REMOTE_URL="https://raw.githubusercontent.com/Joanlood/porty/main/porty.sh"
 INSTALL_PATH="/usr/local/bin/porty"
 
 # --- Handle Flags ---
 if [[ "$1" == "--version" ]]; then
-    echo "Porty version $VERSION"
+    remote_version=$(curl -fsSL "$REMOTE_URL" 2>/dev/null | grep '^VERSION=' | head -n1 | cut -d'"' ->
+
+    if [[ -z "$remote_version" ]]; then
+        echo "Porty version $VERSION"
+        exit 0
+    fi
+
+    if [[ "$remote_version" == "$VERSION" ]]; then
+        echo "Porty version $VERSION (Up to date)"
+    else
+        echo "Porty version $VERSION (Update $remote_version available: use 'porty --update')"
+    fi
+
     exit 0
 fi
+
 
 if [[ -n "$1" ]] && [[ "$1" != --* ]] ; then
     echo "❌ Error: Unknown option '$1'"
@@ -32,9 +45,26 @@ fi
 
 if [[ "$1" == "--update" ]]; then
     echo "🔄 Checking for updates..."
-    sudo curl -s -o $INSTALL_PATH $REMOTE_URL
-    sudo chmod +x $INSTALL_PATH
-    echo "✅ Porty updated from remote repository!"
+
+    remote_version=$(curl -fsSL "$REMOTE_URL" | grep '^VERSION=' | head -n1 | cut -d'"' -f2)
+
+    if [[ -z "$remote_version" ]]; then
+        echo "❌ Failed to fetch remote version"
+        exit 1
+    fi
+
+    if [[ "$remote_version" == "$VERSION" ]]; then
+        echo "✅ Already up to date (v$VERSION)"
+        exit 0
+    fi
+
+    echo "ℹ New version available: $remote_version (current: $VERSION)"
+    echo "⬇ Updating..."
+
+    sudo curl -fsSL -o "$INSTALL_PATH" "$REMOTE_URL"
+    sudo chmod +x "$INSTALL_PATH"
+
+    echo "✅ Successfully updated to v$remote_version"
     exit 0
 fi
 
