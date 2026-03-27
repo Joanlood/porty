@@ -16,7 +16,7 @@ if [[ "$1" == "--version" ]]; then
     if [[ "$remote_version" == "$VERSION" ]]; then
         echo "Porty version $VERSION (Up to date)"
     else
-        echo "Porty version $VERSION (Update available: use 'porty --update')"
+        echo "Porty version $VERSION (Update $remote_version available: use 'porty --update')"
     fi
 
     exit 0
