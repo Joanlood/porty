@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## `1.1.0` – 2026-03-27
+### New Version
+- Made Script faster executing lsof only once
+- uninstall is now in a uninstall.sh to make uninstalling better and safer, also the apt command is removed to make the script support all kind of distros
+
 ## `1.0.6` – 2026-03-13
 ### Added
 - Added Error if no port was found in the specified range
