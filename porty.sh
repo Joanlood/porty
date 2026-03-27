@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.0.6"
+VERSION="1.1.0"
 REMOTE_URL="https://raw.githubusercontent.com/Joanlood/porty/main/porty.sh"
 INSTALL_PATH="/usr/local/bin/porty"
 
@@ -41,13 +41,11 @@ fi
 if [[ "$1" == "--uninstall" ]]; then
     echo "📦 Found Porty installation at $INSTALL_PATH"
     echo "🔧 Removing Porty..."
-    sudo rm -f "$INSTALL_PATH"
-
-    echo "🔧 Cleaning up unnecessary packages..."
-    sudo apt-get autoremove -y
+    ./uninstall.sh
 
     if [[ ! -f "$INSTALL_PATH" ]]; then
         echo "✅ Porty has been successfully uninstalled."
+        echo "ℹ️ Clean the Bash Cache with: hash -r"
     else
         echo "❌ Failed to uninstall Porty."
     fi
@@ -61,38 +59,39 @@ echo " ____            _
 |  __/ (_) | |  | |_| |_| |
 |_|   \___/|_|   \__|\__, |
                      |___/ "
-echo "Please enter the starting port (default 1024):"
-read START_PORT
-START_PORT=${START_PORT:-1024} 
 
-echo "Please enter the ending port (default 65535):"
-read END_PORT
-END_PORT=${END_PORT:-65535}  
+read -rp "Please enter the starting port (default 1024): " start_port
+start_port=${start_port:-1024}
 
-echo "Please enter the maximum number of results to display (default 5):"
-read MAX_RESULTS
-MAX_RESULTS=${MAX_RESULTS:-5}  
+read -rp "Please enter the ending port (default 65535): " end_port
+end_port=${end_port:-65535}
 
-  
+read -rp "Please enter the maximum number of results to display (default 5): " max_results
+max_results=${max_results:-5}
+
+echo
 echo "Using the following settings:"
-echo "START_PORT = $START_PORT"
-echo "END_PORT = $END_PORT"
-echo "MAX_RESULTS = $MAX_RESULTS"
+echo "START_PORT = $start_port"
+echo "END_PORT   = $end_port"
+echo "MAX_RESULT = $max_results"
+echo
 
-COUNT=0
+count=0
 
-for ((port=$START_PORT; port<=$END_PORT; port++)); do
-  if ! sudo lsof -i :$port &>/dev/null; then
-    echo "✅ Port $port is free"
-    ((COUNT++))
-  fi
+lsof_out=$(sudo lsof -nP -iTCP:"${start_port}-${end_port}" -sTCP:LISTEN 2>/dev/null | awk 'NR>1 {split($9,a,":"); print a[length(a)]}')
 
-  if [ "$COUNT" -ge "$MAX_RESULTS" ]; then
-    break
-  fi
+for ((port=start_port; port<=end_port; port++)); do
+    if ! grep -qx "$port" <<< "$lsof_out"; then
+        printf '✅ Port %d is free\n' "$port"
+        ((count++))
+    fi
+
+    if (( count >= max_results )); then
+        break
+    fi
 done
 
-if [ "$COUNT" -eq 0 ]; then
-    echo "❌ Error: No free ports found in the range $START_PORT-$END_PORT"
+if (( count == 0 )); then
+    echo "❌ Error: No free ports found in the range $start_port-$end_port"
     exit 1
 fi
