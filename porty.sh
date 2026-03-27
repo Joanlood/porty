@@ -6,7 +6,7 @@ INSTALL_PATH="/usr/local/bin/porty"
 
 # --- Handle Flags ---
 if [[ "$1" == "--version" ]]; then
-    remote_version=$(curl -fsSL "$REMOTE_URL" 2>/dev/null | grep '^VERSION=' | head -n1 | cut -d'"' ->
+    remote_version=$(curl -fsSL "$REMOTE_URL" 2>/dev/null | grep '^VERSION=' | head -n1 | cut -d'"' -f2)
 
     if [[ -z "$remote_version" ]]; then
         echo "Porty version $VERSION"
@@ -16,7 +16,7 @@ if [[ "$1" == "--version" ]]; then
     if [[ "$remote_version" == "$VERSION" ]]; then
         echo "Porty version $VERSION (Up to date)"
     else
-        echo "Porty version $VERSION (Update $remote_version available: use 'porty --update')"
+        echo "Porty version $VERSION (Update available: use 'porty --update')"
     fi
 
     exit 0
