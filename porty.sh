@@ -41,7 +41,7 @@ fi
 if [[ "$1" == "--uninstall" ]]; then
     echo "📦 Found Porty installation at $INSTALL_PATH"
     echo "🔧 Removing Porty..."
-    ./uninstall.sh
+    curl -fsSL https://raw.githubusercontent.com/Joanlood/porty/refs/heads/main/uninstall.sh | bash
 
     if [[ ! -f "$INSTALL_PATH" ]]; then
         echo "✅ Porty has been successfully uninstalled."
