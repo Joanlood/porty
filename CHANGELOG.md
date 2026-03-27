@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### New Version
 - Made Script faster executing lsof only once
 - uninstall is now in a uninstall.sh to make uninstalling better and safer, also the apt command is removed to make the script support all kind of distros
+- Soon with UDP support!
 
 ## `1.0.6` – 2026-03-13
 ### Added
