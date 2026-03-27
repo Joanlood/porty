@@ -12,7 +12,7 @@ Porty is a simple, yet powerful port scanner that helps you find free ports betw
 
 To install **Porty** on your Linux machine, you can simply run the following command in your terminal:
 
-`curl -fsSL https://raw.githubusercontent.com/Joanlood/porty/main/install.sh | sudo bash`
+`curl -fsSL https://raw.githubusercontent.com/Joanlood/porty/refs/heads/main/install.sh | sudo bash`
 
 
 ## Usage
