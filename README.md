@@ -65,6 +65,10 @@ MAX_RESULTS = 3
 - ✅ Port 2001 is free
 - ✅ Port 2002 is free
 
+## New Version!
+I made an updated version of Porty where **lsof** now runs once and not every time for every port, which makes the Script **30** times Faster!
+![til](https://raw.githubusercontent.com/Joanlood/porty/refs/heads/main/update.gif)
+
 ## Changelog
 
 For a detailed list of changes, please refer to the [CHANGELOG](CHANGELOG.md).
