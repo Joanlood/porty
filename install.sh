@@ -5,10 +5,6 @@ clear
 SCRIPT_URL="https://raw.githubusercontent.com/Joanlood/porty/refs/heads/main/porty.sh"
 INSTALL_PATH="/usr/local/bin/porty"
 
-if [ -f "$INSTALL_PATH" ]; then
-    echo "⚠️ Porty is already installed! Run with: porty"
-    exit 0
-fi
 
 echo "
  ____            _                   _____                ____            _
@@ -24,6 +20,11 @@ echo "
 |____/ \___\__,_|_| |_|_| |_|\___|_|
 "
 echo "   --- Made by Joanlood --- "
+
+if [ -f "$INSTALL_PATH" ]; then
+    echo "⚠️ Porty is already installed! Run with: porty"
+    exit 0
+fi
 
 echo "📥 Downloading porty..."
 curl -fsSL $SCRIPT_URL -o $INSTALL_PATH
