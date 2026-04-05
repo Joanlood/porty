@@ -71,7 +71,7 @@ I made an updated version of Porty where **lsof** now runs once and not every ti
 
 ## Soon! 
 I will soon add a function to also scan for UDP ports!
-![til](https://raw.githubusercontent.com/Joanlood/porty/refs/heads/main/soon.gif)
+![til](https://raw.githubusercontent.com/Joanlood/porty/refs/heads/main/utb.gif)
 
 ## Changelog
 
