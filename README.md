@@ -69,6 +69,10 @@ MAX_RESULTS = 3
 I made an updated version of Porty where **lsof** now runs once and not every time for every port, which makes the Script **30** times Faster!
 ![til](https://raw.githubusercontent.com/Joanlood/porty/refs/heads/main/update.gif)
 
+## Soon! 
+I will soon add a function to also scan for UDP ports!
+![til](https://raw.githubusercontent.com/Joanlood/porty/refs/heads/main/soon.gif)
+
 ## Changelog
 
 For a detailed list of changes, please refer to the [CHANGELOG](CHANGELOG.md).
