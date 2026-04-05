@@ -4,7 +4,7 @@ Porty is a simple, yet powerful port scanner that helps you find free ports betw
 
 ## Features
 - Scans a range of ports (default: 1024 to 65535)
-- Checks for free ports
+- Checks for free TCP ports
 - Limits the results (default: 5)
 - Easy to install and use via simple shell commands
 
